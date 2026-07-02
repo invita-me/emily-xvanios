@@ -317,7 +317,7 @@
             <div class="row justify-content-center">
                 <div class="col-xl-6 col-lg-6">
                     <div class="form-wrapper">
-                        <form id="contact-form" action="#" method="POST">
+                        <form id="contact-form"  method="POST">
                             <!-- section tittle -->
                             <div class="row ">
                                 <div class="col-lg-12">
@@ -330,17 +330,17 @@
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-box mb-30">
-                                        <input type="text" name="name" placeholder="Nombre">
+                                        <input type="text" name="name" id="name" placeholder="Nombre">
                                     </div>
                                 </div>
                                 <div class="col-lg-12">
                                     <div class="form-box subject-icon mb-30">
-                                        <input type="tel" name="subject" placeholder="Celular">
+                                        <input type="tel" name="cel" id="cel" placeholder="Celular">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 mb-30">
                                     <div class="select-itms">
-                                        <select name="select" id="select2">
+                                        <select name="pases" id="pases">
                                             <option value="">1 pase</option>
                                             <option value="">2 pases</option>
                                             <option value="">3 pases</option>
@@ -429,6 +429,27 @@ const sobreInv = document.getElementById('sobreInv');
 					console.log('Element clicked!');
 				});
 			}
+
+            const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbyiK0xYFSFz2Ct7sv9Uh6V5oivoLFt6pulII2M1wqOE3hAKzt_LRaDwBY4tsKWNHNRSsA/exec";
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+    
+    fetch(URL_APPS_SCRIPT, {
+      method: 'POST',
+      body: new FormData(this)
+    })
+    .then(response => response.json())
+    .then(data => {
+      if (data.result === "success") {
+        alert("¡Datos enviados con éxito!");
+        document.getElementById("miFormulario").reset();
+      } else {
+        alert("Ocurrió un error.");
+      }
+    })
+    .catch(error => console.error('Error:', error));
+  });
 </script>
 
 <!-- JS here -->
