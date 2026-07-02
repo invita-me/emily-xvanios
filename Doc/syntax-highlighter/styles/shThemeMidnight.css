@@ -86,13 +86,13 @@
   color: #8aa6c1 !important;
 }
 .syntaxhighlighter .variable {
-  color: #ffaa3e !important;
+  color: #40adeba6 !important;
 }
 .syntaxhighlighter .value {
   color: #f7e741 !important;
 }
 .syntaxhighlighter .functions {
-  color: #ffaa3e !important;
+  color: #40adeba6 !important;
 }
 .syntaxhighlighter .constants {
   color: #e0e8ff !important;
@@ -109,5 +109,5 @@
   color: white !important;
 }
 .syntaxhighlighter .color3, .syntaxhighlighter .color3 a {
-  color: #ffaa3e !important;
+  color: #40adeba6 !important;
 }
