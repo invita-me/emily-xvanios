@@ -6,7 +6,7 @@
     <title>XV años | Emily </title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="">
     <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
 
     <!-- CSS here -->
@@ -38,18 +38,7 @@
 <header>
    
 </header>
-<script>
-const myElement = document.getElementById('start');
-if (myElement) {
-    myElement.addEventListener('click', function () {
-        // Guardamos una señal en localStorage antes de irnos
-        localStorage.setItem('reproducirAudio', 'true');
-        
-        // Redirigimos a la siguiente página
-       console.log("hice click");
-    });
-}
-</script>
+
 <main style="background-image: url('assets/img/gallery/section_bg1.png'); background-size: cover; background-position: center; background-repeat: repeat;">  
     <!--? slider Area Start-->
 
@@ -94,6 +83,19 @@ if (myElement) {
     </section>
     <!--================Blog Area =================-->
 </main>
+<script>
+const myElement = document.getElementById('start');
+if (myElement) {
+     console.log("existe");
+    myElement.addEventListener('click', function () {
+        // Guardamos una señal en localStorage antes de irnos
+        localStorage.setItem('reproducirAudio', 'true');
+        
+        // Redirigimos a la siguiente página
+       console.log("hice click");
+    });
+}
+</script>
 
 <!-- JS here -->
 
