@@ -59,7 +59,7 @@
                                
                             </div>
                             <div class="blog_item_img">
-                                <a  id="start" href="invitacion.html">
+                                <a  id="start" href="#">
                                 <img class="card-img rounded-0" src="assets/img/blog/single_blog_1.png" alt="">
                                  </a>
                             </div>
@@ -75,7 +75,10 @@
                               
                             </div>
                         </article>
-                     
+                         <audio id="audio" controls autoplay>
+							<source src="assets/music/music.ogg" type="audio/ogg">
+							Your browser does not support the audio element.
+						</audio>
                     </div>
                 </div>                    
             </div>
@@ -85,16 +88,17 @@
 </main>
 <script>
 const myElement = document.getElementById('start');
-if (myElement) {
-     console.log("existe");
-    myElement.addEventListener('click', function () {
-        // Guardamos una señal en localStorage antes de irnos
-        localStorage.setItem('reproducirAudio', 'true');
-        
-        // Redirigimos a la siguiente página
-       console.log("hice click");
-    });
-}
+			if (myElement) {
+				myElement.addEventListener('click', function () {
+					const audio = document.querySelector('audio');
+					audio.play().then(() => {
+						// Reproducción automática iniciada
+					}).catch(error => {
+						// La reproducción automática falló, probablemente porque el usuario no ha interactuado
+					});
+					console.log('Element clicked!');
+				});
+			}
 </script>
 
 <!-- JS here -->
