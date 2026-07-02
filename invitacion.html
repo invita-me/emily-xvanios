@@ -41,6 +41,22 @@
     </div>
     <!-- Header End -->
 </header>
+<script>
+    window.addEventListener('load', function() {
+        // Verificamos si la señal está guardada
+        if (localStorage.getItem('reproducirAudio') === 'true') {
+            const audio = document.getElementById('audio');
+                console.log("entra audio");
+            // Reproducimos el audio
+            audio.play().catch(error => {
+                console.log("Error al reproducir automáticamente: ", error);
+            });
+               console.log("fin audio");
+            // Borramos la señal para que no vuelva a sonar al recargar
+            localStorage.removeItem('reproducirAudio');
+        }
+    });
+</script>
 <main>
     <!--? Slider Area Start-->
     <div class="slider-area">

@@ -39,18 +39,16 @@
    
 </header>
 <script>
-    		const myElement = document.getElementById('start');
-			if (myElement) {
-				myElement.addEventListener('click', function () {
-					const audio = document.querySelector('audio');
-					audio.play().then(() => {
-						// Reproducción automática iniciada
-					}).catch(error => {
-						// La reproducción automática falló, probablemente porque el usuario no ha interactuado
-					});
-					console.log('Element clicked!');
-				});
-			}
+const myElement = document.getElementById('start');
+if (myElement) {
+    myElement.addEventListener('click', function () {
+        // Guardamos una señal en localStorage antes de irnos
+        localStorage.setItem('reproducirAudio', 'true');
+        
+        // Redirigimos a la siguiente página
+       console.log("hice click");
+    });
+}
 </script>
 <main style="background-image: url('assets/img/gallery/section_bg1.png'); background-size: cover; background-position: center; background-repeat: repeat;">  
     <!--? slider Area Start-->
