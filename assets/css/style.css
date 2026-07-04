@@ -2786,6 +2786,32 @@ hr {
     background-repeat: no-repeat
 }
 
+table {
+            width: 100%;
+            /* Une los bordes de las celdas para evitar espacios extra */
+            border-collapse: collapse; 
+            /* Elimina cualquier borde de la estructura principal */
+            border: none; 
+        }
+
+        th{
+            padding-bottom: 12px;
+            padding-left: 30px;
+            padding-right: 12px;
+            padding-top: 12px;
+            /* Asegura que las celdas individuales no tengan bordes */
+            border: none; 
+            /* Espaciado interno opcional para que el texto respire */
+            text-align: right;
+        } 
+        td {
+            /* Asegura que las celdas individuales no tengan bordes */
+            border: none; 
+            /* Espaciado interno opcional para que el texto respire */
+            padding: 12px; 
+            text-align: left;
+        }
+
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
     .slider-area .hero__caption h1::before {
         right: 0;
