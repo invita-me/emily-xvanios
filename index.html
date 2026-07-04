@@ -444,26 +444,7 @@ function configurarInvitacion(triggerElement) {
     });
 }
 
-            const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbyiK0xYFSFz2Ct7sv9Uh6V5oivoLFt6pulII2M1wqOE3hAKzt_LRaDwBY4tsKWNHNRSsA/exec";
-
-  document.getElementById("contact-form").addEventListener("submit", function(e) {
-    e.preventDefault();
-    
-    fetch(URL_APPS_SCRIPT, {
-      method: 'POST',
-      body: new FormData(this)
-    })
-    .then(response => response.json())
-    .then(data => {
-      if (data.result === "success") {
-        alert("¡Datos enviados con éxito!");
-        document.getElementById("contact-form").reset();
-      } else {
-        alert("Ocurrió un error.");
-      }
-    })
-    .catch(error => console.error('Error:', error));
-  });
+ 
 </script>
 
 <!-- JS here -->
