@@ -2788,7 +2788,6 @@ hr {
 
 table {
             width: 100%;
-            padding: 20px;
             /* Une los bordes de las celdas para evitar espacios extra */
             border-collapse: collapse; 
             /* Elimina cualquier borde de la estructura principal */
@@ -2796,10 +2795,10 @@ table {
         }
 
         th{
-            padding-bottom: 12px;
-            padding-left: 30px;
-            padding-right: 12px;
-            padding-top: 12px;
+            padding-bottom: 10px;
+            padding-left: 20px;
+            padding-right: 10px;
+            padding-top: 10px;
             /* Asegura que las celdas individuales no tengan bordes */
             border: none; 
             /* Espaciado interno opcional para que el texto respire */
@@ -2809,7 +2808,7 @@ table {
             /* Asegura que las celdas individuales no tengan bordes */
             border: none; 
             /* Espaciado interno opcional para que el texto respire */
-            padding: 12px; 
+            padding: 10px; 
             text-align: left;
         }
 
