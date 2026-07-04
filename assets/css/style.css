@@ -2788,6 +2788,7 @@ hr {
 
 table {
             width: 100%;
+            padding: 20px;
             /* Une los bordes de las celdas para evitar espacios extra */
             border-collapse: collapse; 
             /* Elimina cualquier borde de la estructura principal */
